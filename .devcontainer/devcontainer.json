@@ -1,0 +1,24 @@
+{
+	"name": "bof-dev",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": ".."
+	},
+	"remoteUser": "root",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"C_Cpp.default.compilerPath": "/usr/bin/x86_64-w64-mingw32-gcc",
+				"C_Cpp.default.includePath": [
+					"${workspaceFolder}/src/_common"
+				]
+			},
+			"extensions": [
+				"ms-vscode.cpptools",
+				"ms-vscode.cpptools-extension-pack"
+			]
+		}
+	}
+}
+

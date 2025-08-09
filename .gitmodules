@@ -1,0 +1,4 @@
+[submodule "COFFLoader"]
+	path = COFFLoader
+	url = https://github.com/trustedsec/COFFLoader
+	ignore = dirty
