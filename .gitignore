@@ -54,4 +54,4 @@ dkms.conf
 .vscode/
 .DS_Store
 src/
-src/_common/bofdefs.h
+src/_common/bofdef.h

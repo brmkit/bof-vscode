@@ -183,6 +183,8 @@ list_of_implant_functions_ci = [
     "FreeLibrary"
 ]
 
+# ALERT-> this is just a personal workaround - i really don't like the LIB$FUNCTION style
+list_of_custom_functions = [line.split()[-1] for line in open("../_common/bofdef.h") if line.startswith("#define")]
 
 ###############################################################################
 # Classes Representing COFF Structures
@@ -572,7 +574,7 @@ class COFFObject:
                         if sym_without_prefix not in list_of_implant_functions_ci:
                             log_message(LogLevel.ERROR, f"Imported symbol '{sym_without_prefix}' is not a recognized implant function.", LogDestination.CI)
                     else:
-                        if sym_without_prefix not in (list_of_implant_functions_cs + list_of_implant_functions_oc2 + list_of_implant_functions_ci):
+                        if sym_without_prefix not in (list_of_implant_functions_cs + list_of_implant_functions_oc2 + list_of_implant_functions_ci + list_of_custom_functions):  # MOD ALERT here
                             log_message(LogLevel.ERROR, f"Imported symbol '{sym_without_prefix}' is not a recognized implant function.")
             else:
                 if sym.section_number == 0:
