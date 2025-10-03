@@ -1,9 +1,6 @@
 #include "bofdefs.h"
 
-VOID go( 
-	IN PCHAR Buffer, 
-	IN ULONG Length 
-) 
+void go(char * args, int alen) 
 {
-    
+    // Your code here
 };
