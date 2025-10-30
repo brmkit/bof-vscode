@@ -1,4 +1,4 @@
-# bofs-dev
+# bof-vscode
 just another development environment for Beacon Object Files (BOFs).
 
 ## overview
